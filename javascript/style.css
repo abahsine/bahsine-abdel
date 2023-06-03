@@ -1,0 +1,201 @@
+/*definition du cadre generale body (enlever la marge et definition de la police et sa taille) et back-ground */
+body{
+  margin: 0px; /*supprime les marges autour body*/
+  padding: 0px; /*supprime padding */
+  font-family: arial, verdana, sans-serif; /*police  */
+  font-size: 18px; /*taille caractere  */
+  background: linear-gradient(70deg  , #cecece  ,5%,white); /*degrader lineaire */
+
+}
+/*nav scroll lié au js quand on descend de 50px*/
+.nav_scroll {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  display: inline-block;
+  font-weight: bold;
+  color: #f9f9f9;
+  background-color: #4E342E;
+}
+.nav_scroll .menu_liste  li a{
+  color: white;
+  font-weight: bold;
+}
+
+/*masqué le paragraphe au debut*/
+.loisirs p {
+  display: none;
+}
+/*agrandir l'image personnelle de 1.6 quand on survole sur l'image */
+  .info_personnelle img:hover {
+    transform: scale(1.6);
+    border-radius: 20% 0% 20% 0%;
+    margin-left: 100px;
+    margin-right: 50px;
+  }
+  /*le titre est masqué par default */
+.formation_enfant h2{
+  display: none;
+}
+
+/* caracteristique menu , avec le deroulement des sous menu qui est imbriqué dans naviguer */
+
+.menu_liste {
+
+list-style-type: none; /* Supprime les puces de la liste */
+margin-left: 20px; /* Définit une marge à gauche de la liste */
+padding: 0px; /* Supprime le padding interne de la liste */
+text-align: left; /* Aligne le texte à gauche dans la liste */
+}
+
+
+.menu_liste li {
+display: inline-block; /* Affiche les éléments de la liste en ligne */
+}
+
+.menu_liste li a {
+color: black;/* Définit la couleur du texte des liens du menu */
+font-weight: bold;/*font-weight bien contraste*/
+padding: 10px; /* Définit un espace autour des liens du menu */
+text-decoration: 0px; /* Supprime la décoration des liens du menu (comme soulignement) */
+}
+
+/* Caractéristiques du menu déroulant lorsqu'on survole le menu */
+.menu_deroulant:hover .sous_menu {
+display: block; /* Affiche le sous-menu lorsque le menu est survolé */
+padding-left: 2px; /* Ajoute un padding à gauche du sous-menu */
+padding-right: 6px; /* Ajoute un padding à droite du sous-menu */
+margin: 0px; /* Supprime les marges du sous-menu */
+overflow: hidden; /* Masque le contenu du sous-menu qui dépasse */
+}
+
+.sous_menu {
+display: none; /* Masque le sous-menu par défaut */
+position: absolute; /* Positionne le sous-menu de façon absolue par rapport à son parent */
+background-color: #f9f9f9; /* Définit la couleur de fond du sous-menu */
+min-width: 160px; /* Définit une largeur minimale pour le sous-menu */
+box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2); /* Ajoute une ombre portée au sous-menu */
+z-index: 1; /* Définit la position de l'empilement du sous-menu */
+}
+
+.sous_menu li {
+display: block; /* Affiche les éléments du sous-menu en bloc */
+padding: 5px; /* Ajoute un espace autour des éléments du sous-menu */
+}
+
+.sous_menu li a {
+color: black; /* Définit la couleur du texte des liens du sous-menu */
+text-decoration: none; /*Supprime la décoration des liens du sous-menu */
+}
+
+/* Background après le survol des liens du sous-menu */
+.sous_menu li a:hover {
+background-color: #f2f2f2; /* Change la couleur de fond des liens du sous-menu lorsqu'ils sont survolés */
+}
+/* Définit la marge et le padding du footer à 0px et centre son contenu */
+footer {
+  margin: 0px;
+  padding: 15px;
+  text-align: center;
+}
+/* Centre horizontalement les éléments de la liste à l'intérieur du footer */
+footer ul {
+  justify-content: center;
+}
+/* Enlève les puces de la liste, affiche les éléments de la liste en ligne, et ajoute une marge horizontale de 15px autour des éléments */
+footer ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0px 15px;
+}
+/* Enlève la décoration de lien et définit la couleur de police des liens à blanc */
+footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+/* Centre horizontalement et verticalement le contenu à l'intérieur de l'élément ayant l'ID "table_loisirs" */
+#table_loisirs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Affiche les éléments avec la classe "loisirs" en ligne, les enroule à la ligne si nécessaire et répartit l'espace entre eux */
+.loisirs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Ajoute un espace de 4px autour du texte des paragraphes à l'intérieur de l'élément ayant la classe "loisirs_content" */
+.loisirs_content p {
+  padding: 4px;
+}
+/* Définit la largeur de l'élément ayant la classe "loisirs_content" à 30%, centre horizontalement son contenu, supprime la marge inférieure par défaut, centre l'élément par rapport à son parent, et ajoute une marge supérieure de 40px */
+.loisirs_content {
+  width: 30%;
+  justify-content: center;
+  margin-bottom: 0px;
+  margin: auto;
+  margin-top: 40px;
+}
+/* Définit la couleur du texte des titres de niveau 3 à rouge et ajoute une marge à gauche de 150px */
+.loisirs_content h3 {
+  color: red;
+  margin-left: 150px;
+}
+
+
+/* Ajoute une marge à gauche de 120px à l'image à l'intérieur de l'élément ayant la classe "loisirs_content" et ajoute une bordure de 2px solide autour de l'image */
+.loisirs_content img {
+  margin-left: +120px;
+  border: 2px solid;
+}
+
+/* Centre horizontalement le texte des paragraphes à l'intérieur de l'élément ayant la classe "presentation", justifie le texte, définit la taille de police à 1.2em, et définit la hauteur de ligne à 1.5 */
+
+.presentation p {
+  margin: auto 30px;
+  text-align: justify;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+/* Affiche les éléments avec l'ID "experience_pro" en ligne, les enroule à la ligne si nécessaire et répartit l'espace entre eux */
+
+#experience_pro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Définit la largeur de l'élément ayant la classe "experience_professionnelle_content" à 40%, supprime la marge supérieure par défaut et centre horizontalement son contenu */
+
+.experience_professionnelle_content {
+  width: 40%;
+  margin-top: 0px;
+  justify-content: center;
+}
+
+/* Affiche les éléments avec la classe "formation_content" en ligne, définit leur largeur à 100%, ajoute une bordure de 2px solide autour des éléments et supprime la marge gauche par défaut */
+
+.formation_content {
+  display: flex;
+  width: 100%;
+  border: 2px solid;
+  margin-left: 0px;
+}
+
+/* Ajoute une marge de 20px autour des éléments avec la classe "formation_enfant" et une marge supérieure de 50px */
+
+.formation_enfant {
+  margin: 20px;
+  margin-top: 50px;
+}
+
+/* Affiche les images à l'intérieur des éléments avec la classe "formation_enfant" en ligne, et ajoute une marge de gauche de 80px aux images */
+
+.formation_enfant img {
+  display: flex;
+  margin-left: 80px;
+}
+
